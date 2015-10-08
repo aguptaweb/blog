@@ -15,13 +15,20 @@
  */
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:                          #ECECEA;
+$teal: #558C89;
+$lightTeal: #74afad;
+$orange: #d9853b;
+$offWhite: #ececea;
+$white: #ffffff;
+$text: #585457;
+$body-bg:                          $offWhite;
 $font-family-sans-serif:           'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                    45px;
-$navbar-default-bg:                white;
-$navbar-default-brand-color:       #558C89;
-$brand-primary:                    #558C89;
-$jumbotron-bg:                     white;
+$navbar-default-bg:                $white;
+$navbar-default-brand-color:       $teal;
+$brand-primary:                    $teal;
+$jumbotron-bg:                     $white;
+
 
 /* Mixins */
 @mixin transition ($seconds) {
@@ -35,11 +42,10 @@ $jumbotron-bg:                     white;
 @import "bootstrap";
 
 a {
-	color: #D9853B;
+	color: $orange;
 	@include transition(.5s);
 	&:hover {
-		color: darken(#D9853B, 10%);
+		color: darken($orange, 10%);
 		text-decoration: none;
-
 	}
 }
