@@ -4,7 +4,7 @@
   <% @posts.each do |post| %>
     <div class="row">
       <div class="col-md-8 col-md-offset-2 individual-post">
-        <h2><%= link_to post.title, post, class: "text" %></h2>
+        <h2><%= link_to post.title, post %></h2>
         <p><%= link_to post.body, post, class: "text" %><%= link_to " ...read more ->", post %></p>
       </div>
     </div>

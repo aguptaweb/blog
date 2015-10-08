@@ -37,6 +37,11 @@ $jumbotron-bg:                     $white;
     -o-transition: $seconds;
     transition: $seconds;
 }
+@mixin border-radius ($px) {
+	-webkit-border-radius: $px;
+	-moz-border-radius: $px;
+	border-radius: $px;
+}
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -47,5 +52,24 @@ a {
 	&:hover {
 		color: darken($orange, 10%);
 		text-decoration: none;
+	}
+}
+
+#blog-index {
+	div.individual-post {
+		background-color: $white;
+		margin-bottom: 2rem;
+		@include border-radius (2px);
+		padding: 0 3rem 1.5rem 3rem;
+	}
+	a.text {
+		color: $text;
+		&:hover {
+			color: $text;
+		}
+	}
+	h2 {
+		font-size: 2.25rem;
+		margin-bottom: .75rem;
 	}
 }
